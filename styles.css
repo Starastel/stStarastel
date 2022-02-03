@@ -34,7 +34,7 @@ h2 {
 	border: 2px solid white;
 }
 .textMnBox {
-        margin-left: auto;
+        margin-left: center;
         max-height: 300px;
         min-height: 250px;
         max-width: 300px;
