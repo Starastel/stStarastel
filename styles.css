@@ -1,0 +1,102 @@
+@media (max-width: 889px) {
+	.cover img{
+	height: 600;
+	}
+	.scrht img{
+	height: 150;	
+	}
+}
+@media (min-width: 890px) {
+	.cover img{
+	height: 360;
+	}
+	.scrht img{
+	height: 110;	
+	}
+}
+* {
+    font-family: terminalvectornormal;
+}
+h1 {
+	font-size: 32px;
+	text-align: center;
+}
+h2 {
+	font-size: 32px;
+	text-align: center;
+}
+.cover {
+	text-align: center;
+	padding: 8px;
+	border-bottom: 2px solid white;
+}
+.cover img{
+	border: 2px solid white;
+}
+.scrht img{
+	border: 2px solid white;
+}
+.scrht {
+	text-align: center;
+	border-top: 2px solid white;
+	border-bottom: 2px solid white;
+	padding: 5px;
+}
+.name {
+	font-size: 32px;
+	text-align: center;
+	border-top: 2px solid white;
+	border-bottom: 2px solid white;
+	padding: 8px;
+}
+.butmen {
+	font-size: 16pt;
+	height: 36px;
+	position: relative;
+	top: 6;
+	left: 8;
+}
+.butmen a{
+	border-right: 2px solid white;
+	padding: 9px;
+	text-decoration: none; 
+}
+.butmen a:hover {
+	color: blue;
+}
+.history {
+	text-align: center;
+	padding: 9px;
+}
+.main {
+	max-width: 850px;
+	min-width: 300px;
+	text-align: left;
+	color: white;
+	border: 2px solid white;
+	background: #333333;
+}
+#footer {
+	text-align: center;
+	font-size: 12pt;
+	padding: 3px;
+	border-top: 1px solid white;
+}
+ul {
+	list-style-type: square;
+} 
+summary {
+	font-size: auto;
+	text-decoration: underline;
+	display: block;
+	list-style-type: square;
+}
+summary:hover {
+	color: blue;
+}
+details[open] summary {
+	text-decoration: none; 
+}
+details[open] summary:hover {
+	color: blue;
+}
