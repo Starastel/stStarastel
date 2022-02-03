@@ -33,6 +33,14 @@ h2 {
 .cover img{
 	border: 2px solid white;
 }
+.textMnBox {
+        max-width: 800px;
+	min-width: 250px;
+	text-align: left;
+	color: white;
+	border: 2px solid white;
+	background: #333333;
+}
 .scrht img{
 	border: 2px solid white;
 }
