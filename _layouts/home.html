@@ -23,7 +23,8 @@ layout: default
 			<font size="3pt"><p style="text-align:right;">{{ post.date | date: date_format }}</p></td></tr></font>
 			</table>
 			</div>
-			<p>{{ post.excerpt | strip_html | truncatewords:55 }} <a href="{{ post.url }}">Продолжить чтение.</a></p>
+			<p>{{ post.excerpt | strip_html | truncatewords:64 }}</p>
+			<p><a href="{{ post.url }}">Продолжить чтение.</a></p>
 		</li>
 		{% endfor %}
 	</ul>
