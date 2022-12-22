@@ -23,12 +23,9 @@ layout: default
 			<font size="3pt"><p style="text-align:right;">{{ post.date | date: date_format }}</p></td></tr></font>
 			</table>
 			</div>
-				<!-- {{ post.excerpt }} -->
+			{{ post.excerpt }}
 		</li>
-		<!-- {%- if site.show_excerpts -%}
-		  {{ post.excerpt }}
-		{%- endif -%} -->
-	  {%- endfor -%}
+		{% endfor %}
 	</ul>
 
   {%- endif -%}
