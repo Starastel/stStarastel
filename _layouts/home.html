@@ -23,7 +23,7 @@ layout: default
 			<font size="3pt"><p style="text-align:right;">{{ post.date | date: date_format }}</p></td></tr></font>
 			</table>
 			</div>
-			<p>{{ post.excerpt }}</p>
+			<p>{{ post.excerpt | strip_html | truncatewords:75 }}</p>
 		</li>
 		{% endfor %}
 	</ul>
