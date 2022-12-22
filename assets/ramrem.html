@@ -1,0 +1,362 @@
+<html lang="ru">
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="../styles.css">
+	<link rel="shortcut icon" href="../icon.ico" type="image/x-icon"/>
+	<link rel="apple-touch-icon" type="image/png" href="../icon.png">
+<title>Rammstein's Demos & Covers — Starastel</title>
+</head>
+<body bgcolor="#000000" text="White" link="White" alink="Yellow" vlink="White">
+<center>
+
+<div class="main">
+
+<div class="name">Rammstein’s Demos & Covers</div>
+<div class="au_player">
+<script>
+// html5media enables <video> and <audio> tags in all major browsers
+// External File: http://api.html5media.info/1.1.8/html5media.min.js
+
+
+// Add user agent as an attribute on the <html> tag...
+// Inspiration: http://css-tricks.com/ie-10-specific-styles/
+var b = document.documentElement;
+b.setAttribute('data-useragent', navigator.userAgent);
+b.setAttribute('data-platform', navigator.platform);
+
+
+// HTML5 audio player + playlist controls...
+// Inspiration: http://jonhall.info/how_to/create_a_playlist_for_html5_audio
+// Mythium Archive: https://archive.org/details/mythium/
+jQuery(function ($) {
+	var supportsAudio = !!document.createElement('audio').canPlayType;
+	if (supportsAudio) {
+		var index = 0,
+			playing = false,
+			mediaPath = 'https://stateler.ml/Pages/RammRems/files/',
+			extension = '',
+			tracks = [
+
+	 
+			{
+				"track": 1,
+				"name": "Das Alte Leid (1994 Демо)",
+				"length": "5:40",
+				"file": "01.%20Das%20Alte%20Leid%20(1994%20Демо).mp3"
+			},
+			{
+				"track": 2,
+				"name": "Weißes Fleisch (1994 Демо)",
+				"length": "3:27",
+				"file": "02. Weißes Fleisch (1994 Демо).mp3"
+			},
+			{
+				"track": 3,
+				"name": "Der Seemann (1994 Демо)",
+				"length": "6:03",
+				"file": "03. Der Seemann (1994 Демо).mp3"
+			},
+			{
+				"track": 4,
+				"name": "Rammstein (1994 Демо)",
+				"length": "5:27",
+				"file": "04. Rammstein (1994 Демо).mp3"
+			},
+			{
+				"track": 5,
+				"name": "Jeder Lacht (1994 Демо)",
+				"length": "4:02",
+				"file": "05. Jeder Lacht (1994 Демо).mp3"
+			},
+			{
+				"track": 6,
+				"name": "Feuerräder (1994 Демо)",
+				"length": "5:03",
+				"file": "01. Feuerräder (1994 Демо).mp3"
+			},
+			{
+				"track": 7,
+				"name": "Wilder Wein (Demo Version 1994)",
+				"length": "5:42",
+				"file": "Wilder Wein (Demo Version 1994).mp3"
+			},
+			{
+				"track": 8,
+				"name": "Schwarzes Glas (1994 Демо)",
+				"length": "4:49",
+				"file": "06. Schwarzes Glas (1994 Демо).mp3"
+			},
+			{
+				"track": 9,
+				"name": "Der Riecher (Du Riechst So Gut Демо)",
+				"length": "5:26",
+				"file": "Der Riecher (Du Riechst So Gut Демо).mp3"
+			},
+			{
+				"track": 10,
+				"name": "Rammstein (1995 Демо)",
+				"length": "5:23",
+				"file": "Rammstein (1995 Демо).mp3"
+			},
+			{
+				"track": 11,
+				"name": "Feuerräder Rough Mix",
+				"length": "4:27",
+				"file": "Feuerrader HERZELEID SESSIONS DEMO RM.ogg"
+			},
+			{
+				"track": 12,
+				"name": "Tier 94 (Biest) Cover by BOGEMA (2014)",
+				"length": "4:45",
+				"file": "Tier 94 (Biest) Cover by BOGEMA feat. Max Revolin (2014).mp3"
+			},
+			{
+				"track": 13,
+				"name": "Jeder Lacht Cover by RammAllianze (2014)",
+				"length": "3:01",
+				"file": "Jeder Lacht Cover by RammAllianze (2014).mp3"
+			},
+			{
+				"track": 14,
+				"name": "Schwarzes Glas 1996 Cover by Mattjina & Tom Smit feat. KaMmErJaEgEr",
+				"length": "5:23",
+				"file": "Schwarzes Glas 1996 Cover by KaMmErJaEgEr.mp3"
+			},
+			{
+				"track": 15,
+				"name": "Die Zeit (Alter Mann 1994) Cover by RammAllianze (2014)",
+				"length": "3:36",
+				"file": "Die Zeit (Alter Mann 1994) Cover by RammAllianze (2014).mp3"
+			},
+			{
+				"track": 16,
+				"name": "Tier 94 Cover by Felspropheten (2020)",
+				"length": "5:07",
+				"file": "Tier 94 Cover by Felspropheten (2020).mp3"
+			},
+			{
+				"track": 17,
+				"name": "Das Wasser soll dein (Alter Mann 1994) Instrumental Cover by RRCC (2017)",
+				"length": "6:19",
+				"file": "Das Wasser soll dein (Alter Mann 1994) Instrumental Cover by RRCC (2017).mp3"
+			},
+			{
+				"track": 18,
+				"name": "Jeder Lacht Instrumental Cover (2014)",
+				"length": "4:09",
+				"file": "Jeder Lacht Instrumental Cover (2014).mp3"
+			},
+   				],
+			trackCount = tracks.length,
+			npAction = $('#npAction'),
+			npTitle = $('#npTitle'),
+			audio = $('#audio1').bind('play', function () {
+				playing = true;
+				npAction.text('Now Playing...');	 
+				$('.plSel').removeClass('plSel');				
+				$('#tracklist tr:eq(' + index + ')').addClass('plSel');
+				console.log(index);
+			}).bind('pause', function () {
+				playing = false;
+				npAction.text('Paused...');
+			}).bind('ended', function () {
+				npAction.text('Paused...');
+				if ((index + 1) < trackCount) {
+					index++;
+					loadTrack(index, 0);
+					audio.play();
+				} else {
+					audio.pause();
+					index = 0;
+					loadTrack(index, 0);
+				}
+			}).get(0),
+			btnPrev = $('#btnPrev').click(function () {
+				if ((index - 1) > -1) {
+					index--;
+					loadTrack(index, 0);
+					if (playing) {
+						audio.play();
+					}
+				} else {
+					audio.pause();
+					index = 0;
+					loadTrack(index, 0);
+				}
+			}),
+			btnNext = $('#btnNext').click(function () {
+				if ((index + 1) < trackCount) {
+					index++;
+					loadTrack(index, 0);
+					if (playing) {
+						audio.play();
+					}
+				} else {
+					audio.pause();
+					index = 0;
+					loadTrack(index, 0);
+				}
+			}),
+			li = $('#tracklist tr').click(function () {
+				var id = parseInt($(this).index());
+				if (id < trackCount) {
+					playTrack(id);
+				}
+			}),
+			loadTrack = function (id, initialSelectTrack) {
+				if (id < trackCount) {
+					if (initialSelectTrack == 0) {
+						$('.plSel').removeClass('plSel');
+						$('#tracklist tr:eq(' + id + ')').addClass('plSel');
+				  	}
+					npTitle.text(tracks[id].name);
+					index = id;
+					audio.src = mediaPath + tracks[id].file + extension;
+				}
+			},
+			playTrack = function (id) {
+				loadTrack(id, 0);
+				audio.play();
+			};
+		extension = '';
+		loadTrack(index, 1);
+	}
+});
+</script>
+<center>
+<div id="audiowrap">
+	<div id="audio0">
+		<audio preload id="audio1" controls="controls">Your browser does not support HTML5 Audio!</audio>
+	</div>
+	<div id="tracks">
+		<a id="btnPrev">&laquo;</a>
+		<a id="btnNext">&raquo;</a>
+	</div>
+</div> 
+
+	<table id="tracklist">
+		 
+	<tr class="regularrow trackrow">
+		<td class="number">1.01</td>
+		<td class="name">Das Alte Leid (1994 Демо)</td>	  
+		<td class="length">5:40</td>
+		<td class="download"><a href="https://stateler.ml/Pages/RammRems/files/01.%20Das%20Alte%20Leid%20(1994%20Демо).mp3">Скачать</a></td>
+	</tr>
+	<tr class="regularrow trackrow">
+		<td class="number">1.02</td>
+		<td class="name">Weißes Fleisch (1994 Демо)</td>	  
+		<td class="length">3:27</td>
+		<td class="download"><a href="https://stateler.ml/Pages/RammRems/files/02. Weißes Fleisch (1994 Демо).mp3">Скачать</a></td>
+	</tr>
+	<tr class="regularrow trackrow">
+		<td class="number">1.03</td>
+		<td class="name">Der Seemann (1994 Демо)</td>	  
+		<td class="length">6:03</td>
+		<td class="download"><a href="https://stateler.ml/Pages/RammRems/files/03. Der Seemann (1994 Демо).mp3">Скачать</a></td>
+	</tr>
+	<tr class="regularrow trackrow">
+		<td class="number">1.04</td>
+		<td class="name">Rammstein (1994 Демо)</td>	  
+		<td class="length">5:27</td>
+		<td class="download"><a href="https://stateler.ml/Pages/RammRems/files/04. Rammstein (1994 Демо).mp3">Скачать</a></td>
+	</tr>
+	<tr class="regularrow trackrow">
+		<td class="number">1.05</td>
+		<td class="name">Jeder Lacht (1994 Демо)</td>	  
+		<td class="length">4:02</td>
+		<td class="download"><a href="https://stateler.ml/Pages/RammRems/files/05. Jeder Lacht (1994 Демо).mp3">Скачать</a></td>
+	</tr>
+	<tr class="regularrow trackrow">
+		<td class="number">1.06</td>
+		<td class="name">Feuerräder [Расширенная версия]</td>	  
+		<td class="length">5:03</td>
+		<td class="download"><a href="https://stateler.ml/Pages/RammRems/files/01. Feuerräder (1994 Демо).mp3">Скачать</a></td>
+	</tr>
+	<tr class="regularrow trackrow">
+		<td class="number">1.07</td>
+		<td class="name">Wilder Wein (Demo Version 1994)</td>	  
+		<td class="length">5:42</td>
+		<td class="download"><a href="https://stateler.ml/Pages/RammRems/files/Wilder Wein (Demo Version 1994).mp3">Скачать</a></td>
+	</tr>
+	<tr class="regularrow trackrow">
+		<td class="number">1.08</td>
+		<td class="name">Schwarzes Glas (1994 Демо)</td>	  
+		<td class="length">4:49</td>
+		<td class="download"><a href="https://stateler.ml/Pages/RammRems/files/06. Schwarzes Glas (1994 Демо).mp3">Скачать</a></td>
+	</tr>
+	<tr class="regularrow trackrow">
+		<td class="number">1.09</td>
+		<td class="name">Der Riecher (Du Riechst So Gut Демо)</td>	  
+		<td class="length">5:56</td>
+		<td class="download"><a href="https://stateler.ml/Pages/RammRems/files/Der Riecher (Du Riechst So Gut Демо).mp3">Скачать</a></td>
+	</tr>
+	<tr class="regularrow trackrow">
+		<td class="number">1.10</td>
+		<td class="name">Rammstein (1995 Демо)</td>	  
+		<td class="length">5:23</td>
+		<td class="download"><a href="https://stateler.ml/Pages/RammRems/files/Rammstein (1995 Демо).mp3">Скачать</a></td>
+	</tr>
+	<tr class="regularrow trackrow">
+		<td class="number">1.11</td>
+		<td class="name">Feuerräder Rough Mix</td>	  
+		<td class="length">4:27</td>
+		<td class="download"><a href="https://stateler.ml/Pages/RammRems/files/Feuerrader HERZELEID SESSIONS DEMO RM.ogg">Скачать</a></td>
+	</tr>
+	<tr class="regularrow trackrow">
+		<td class="number">2.01</td>
+		<td class="name">Tier'94 / Biest Cover by BOGEMA (2014)</td>	  
+		<td class="length">4:40</td>
+		<td class="download"><a href="https://stateler.ml/Pages/RammRems/files/Tier 94 (Biest) Cover by BOGEMA feat. Max Revolin (2014).mp3">Скачать</a></td>
+	</tr>
+	<tr class="regularrow trackrow">
+		<td class="number">2.02</td>
+		<td class="name">Jeder Lacht Cover by RammAllianze (2014)</td>	  
+		<td class="length">3:01</td>
+		<td class="download"><a href="https://stateler.ml/Pages/RammRems/files/Jeder Lacht Cover by RammAllianze (2014).mp3">Скачать</a></td>
+	</tr>
+	<tr class="regularrow trackrow">
+		<td class="number">2.03</td>
+		<td class="name">Schwarzes Glas 1996 Cover by Mattjina & Tom Smit feat KaMmErJaEgEr</td>	  
+		<td class="length">3:36</td>
+		<td class="download"><a href="https://stateler.ml/Pages/RammRems/files/Schwarzes Glas 1996 Cover by KaMmErJaEgEr.mp3">Скачать</a></td>
+	</tr>
+	<tr class="regularrow trackrow">
+		<td class="number">2.04</td>
+		<td class="name">Die Zeit (Alter Mann 1994) Cover by RammAllianze (2014)</td>	  
+		<td class="length">6:23</td>
+		<td class="download"><a href="https://stateler.ml/Pages/RammRems/files/Die Zeit (Alter Mann 1994) Cover by RammAllianze (2014).mp3">Скачать</a></td>
+	</tr>
+	<tr class="regularrow trackrow">
+		<td class="number">2.05</td>
+		<td class="name">Tier'94 Cover by Felspropheten (2020)</td>	  
+		<td class="length">5:07</td>
+		<td class="download"><a href="https://stateler.ml/Pages/RammRems/files/Tier 94 Cover by Felspropheten (2020).mp3">Скачать</a></td>
+	</tr>
+	<tr class="regularrow trackrow">
+		<td class="number">2.06</td>
+		<td class="name">Das Wasser soll dein (Alter Mann 1994) Instrumental Cover by RRCC (2017)</td>	  
+		<td class="length">6:19</td>
+		<td class="download"><a href="https://stateler.ml/Pages/RammRems/files/Das Wasser soll dein (Alter Mann 1994) Instrumental Cover by RRCC (2017).mp3">Скачать</a></td>
+	</tr>
+	<tr class="regularrow trackrow">
+		<td class="number">2.07</td>
+		<td class="name">Jeder Lacht Instrumental Cover (2014)</td>	  
+		<td class="length">4:09</td>
+		<td class="download"><a href="https://stateler.ml/Pages/RammRems/files/Jeder Lacht Instrumental Cover (2014).mp3">Скачать</a></td>
+	</tr>
+	</table>
+</div>
+
+<div id="footer">© 2022 Станислав «Starastel» П.</div>
+
+</div>
+<script>
+if (window.devicePixelRatio !== 1) { // Костыль для определения иных устройств, с коэффициентом отличным от 1		
+  var dpt = window.devicePixelRatio;
+  var widthM = window.screen.width * dpt;
+  var widthH = window.screen.height * dpt;
+  document.write('<meta name="viewport" content="width=' + widthM+ ', height=' + widthH + '">');
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+---
+layout: default
+---
+
+<div class="home">
+  {%- if page.title -%}
+	<h1 class="page-heading">{{ page.title }}</h1>
+  {%- endif -%}
+
+  {{ content }}
+
+  {%- if site.posts.size > 0 -%}
+	<center><h1>{{ page.list_title | default: "Записи" }}</h1></center>
+	<br>
+	
+	<ul class="post-list">
+	  {%- for post in paginator.posts -%}
+		<li>
+			<div class="pst_ttl">
+			<table>
+			<tr><td><h3><a href="{{ post.url }}">{{ post.title }}</a></h3></td>
+			<td>{%- assign date_format = site.date_format | default: "%d-%m-%Y" -%}
+			<font size="3pt"><p style="text-align:right;">{{ post.date | date: date_format }}</p></td></tr></font>
+			</table>
+			</div>
+				{{ post.excerpt }}
+		</li>
+		{%- if site.show_excerpts -%}
+		  {{ post.excerpt }}
+		{%- endif -%}
+	  {%- endfor -%}
+	</ul>
+
+  {%- endif -%}
+<center>
+{% if paginator.total_pages > 1 %}
+<div class="pagination">
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path | relative_url }}">&laquo; Предыдущие</a>
+  {% else %}
+    <span>&laquo; Предыдущие</span>
+  {% endif %}
+
+  {% for page in (1..paginator.total_pages) %}
+    {% if page == paginator.page %}
+      <em>{{ page }}</em>
+    {% elsif page == 1 %}
+      <a href="{{ '/' | relative_url }}">{{ page }}</a>
+    {% else %}
+      <a href="{{ site.paginate_path | relative_url | replace: ':num', page }}">{{ page }}</a>
+    {% endif %}
+  {% endfor %}
+
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path | relative_url }}">Следующие &raquo;</a>
+  {% else %}
+    <span>Следующие &raquo;</span>
+  {% endif %}
+</div>
+{% endif %}
+</center>
+</div>

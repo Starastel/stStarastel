@@ -1,21 +1,24 @@
-<html>
-<head>
-	<link rel="stylesheet" type="text/css" href="styles.css">
-    <link rel="shortcut icon" href="icon.ico" type="image/x-icon"/>
-    <link rel="apple-touch-icon" type="image/png" href="icon.png">
-	
-<title>Ошибка</title>
-</head>
-<center>
-<body bgcolor="#000000" text="White" link="White" alink="Yellow" vlink="White">
-<font size="7"><p>Ошибка<br>Страница или файл не найден</p></font>
-</body>
-  <script>
-if (window.devicePixelRatio !== 1) { // Костыль для определения иных устройств, с коэффициентом отличным от 1		
-  var dpt = window.devicePixelRatio;
-  var widthM = window.screen.width * dpt;
-  var widthH = window.screen.height * dpt;
-  document.write('<meta name="viewport" content="width=' + widthM+ ', height=' + widthH + '">');
-}
-</script>
-</html>
+---
+layout: default
+---
+
+<style type="text/css" media="screen">
+  .container {
+    margin: 10px auto;
+    max-width: 600px;
+    text-align: center;
+  }
+  h1 {
+    margin: 30px 0;
+    font-size: 4em;
+    line-height: 1;
+    letter-spacing: -1px;
+  }
+</style>
+
+<div class="container">
+  <h1>404</h1>
+
+  <p><strong>Page not found :(</strong></p>
+  <p>The requested page could not be found.</p>
+</div>
