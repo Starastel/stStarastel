@@ -24,7 +24,7 @@ layout: default
 			</table>
 			</div>
 			<p>{{ post.excerpt | strip_html | truncatewords:64 }}</p>
-			<p><a href="{{ post.url }}">Продолжить чтение.</a></p>
+			<p style="text-align:right;"><a href="{{ post.url }}">Продолжить чтение →</a></p>
 		</li>
 		{% endfor %}
 	</ul>
