@@ -94,9 +94,11 @@ main {
 
 img {
 	max-width: 100%;
-	vertical-align: middle;
+	display: block;
+	margin-bottom: 14pt;
+	margin-top: 14pt;
 	margin-left: auto;
-  	margin-right: auto;
+	margin-right: auto;
 	border: 2px solid white;
 }
 
