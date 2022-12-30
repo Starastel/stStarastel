@@ -3,12 +3,12 @@ layout: default
 ---
 
 <div class="home">
-  {{ content }}
+	{%- if page.title -%}
+	<h1 class="page-heading">{{ page.title }}</h1>
+  {%- endif -%}
 
-  {%- if site.posts.size > 0 -%}
-	<center><h1>{{ page.list_title | default: "Записи" }}</h1></center>
-	<br>
-	
+
+  {{ content }}
 	<ul class="post-list">
 	  {%- for post in paginator.posts -%}
 		<li>
