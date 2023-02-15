@@ -274,7 +274,8 @@ table {
 }
 
 .pst_ttl {
-	position: relative;
+	display: flex;
+	justify-content: space-between;
 }
 
 .pst_ttl table {
