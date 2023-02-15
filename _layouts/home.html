@@ -12,12 +12,10 @@ layout: default
 	<ul class="post-list">
 	  {%- for post in paginator.posts -%}
 		<li>
-			<div class="pst_ttl">
-			<table>
-			<tr><td><h3><a href="{{ post.url }}">{{ post.title }}</a></h3></td>
-			<td>{%- assign date_format = site.date_format | default: "%d-%m-%Y" -%}
-			<font size="3pt"><p style="text-align:right;">{{ post.date | date: date_format }}</p></td></tr></font>
-			</table>
+			<div class="site-title">
+			<h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+			{%- assign date_format = site.date_format | default: "%d-%m-%Y" -%}
+			<font size="3pt"><p style="text-align:right;">{{ post.date | date: date_format }}</p></font>
 			</div>
 			<p>{{ post.excerpt | strip_html | truncatewords:64 }}</p>
 			<p style="text-align:right;"><a href="{{ post.url }}">Продолжить чтение →</a></p>
