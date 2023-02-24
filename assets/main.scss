@@ -66,6 +66,7 @@ dl, dd, ol, ul, figure {
 body {
 	font-family: 'Noto Sans Display';
 	font-size: 14pt;
+	font-stretch: ultra-condensed;
 	color: $text-color;
 	background-color: $background-color;
 	-webkit-text-size-adjust: 100%;
@@ -120,12 +121,14 @@ ul, ol {
 	-moz-hyphens: auto;
 	-ms-hyphens: auto;
 	hyphens: auto;
+	font-stretch: ultra-condensed;
 
 }
 
 p {
 	text-align: justify;
 	text-indent: 25pt;
+	font-stretch: ultra-condensed;
 	-moz-hyphens: auto;
 	-ms-hyphens: auto;
 	hyphens: auto;
