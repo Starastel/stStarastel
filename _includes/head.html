@@ -7,6 +7,6 @@
     <link rel="apple-touch-icon" type="image/png" href="{{ "/assets/icon.png" | relative_url }}">
   <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
 
-	{% capture pagetitle %}{{ page.title | escape }}{% else %}{{ site.title | escape }} | {% if page.title %}{{ site.title | escape }}{% endif %}{% endcapture %}
+	{% capture pagetitle %}{% if page.title %}{{ page.title | escape }} | {{ site.title | escape }}{% else %}{{ site.title | escape }}{% endif %}{% endcapture %}
 	<title>{{ pagetitle }}</title>
 </head>
