@@ -150,12 +150,12 @@ a {
 	text-decoration: none;
 
 	&:visited {
-		color: darken($text-color, 15%);
+		color: darken($text-color, 20%);
 	}
 
 	&:hover {
-		color: $alink-color;
-		text-decoration: underline;
+		/* color: $alink-color; */
+		background: #0000ff;
 	}
 }
 
