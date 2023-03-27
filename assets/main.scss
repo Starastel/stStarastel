@@ -292,7 +292,7 @@ table {
 
 .pst_ttl {
 	justify-content: space-between;
-
+display: inline-block;
         &:hover * {
 		color: $link-color;
 		background: #0000ff;
