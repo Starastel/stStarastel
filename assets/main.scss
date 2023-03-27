@@ -291,6 +291,10 @@ table {
         color: $link-color;
 	background: #0000ff;
 }
+.pst_ttl:hover * {
+        color: $link-color;
+	background: #0000ff;
+}
 
 .pst_ttl table {
 	margin-top: -32pt;
