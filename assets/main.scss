@@ -281,6 +281,11 @@ table {
 	justify-content: space-between;
 	align-items: center;
 	align-content: center;
+
+        &:hover {
+		color: $link-color;
+		background: #0000ff;
+	}
 }
 
 .pst_ttl table {
