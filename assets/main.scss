@@ -237,9 +237,8 @@ table {
 	justify-content: space-between;
 	align-items: baseline;
 	width: 100%;
+	align-content: center;
 }
-.pst_blk1 {float: left;}
-.pst_blk2 {float: right;}
 
 .site-header {
 	min-height: $spacing-unit * 1.865;
