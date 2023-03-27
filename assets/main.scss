@@ -233,10 +233,8 @@ table {
 }
 
 .pst_ttl {
-	min-height: $spacing-unit * 1.865;
-	margin-bottom: -22px;
-	position: relative;
 	display: flex;
+	justify-content: space-between;
 }
 
 .pst_ttl_title {
