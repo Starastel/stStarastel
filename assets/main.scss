@@ -292,22 +292,7 @@ table {
 
 .pst_ttl {
 	justify-content: space-between;
-display: inline-block;
-}
-
-.pst_ttl table {
-	margin-top: -32pt;
-	margin-bottom: -15pt;
-	margin-left: -11pt;
-	
-	width: 104%;
-	border: 0px;
-	th {
-		border: 0;
-	}
-	td {
-		border: 0;
-	}
+	display: flex;
 }
 
 /**
