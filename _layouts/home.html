@@ -11,7 +11,7 @@ layout: default
 		<li>
 			<a href="{{ post.url }}"><div class="pst_ttl">
 				<h3>{{ post.title }}</h3>
-				<p style="text-align:right;text-size:3pt;">{%- assign date_format = site.date_format | default: "%d-%m-%Y" -%}{{ post.date | date: date_format }}</p>
+				<p style="text-align:right;">{%- assign date_format = site.date_format | default: "%d-%m-%Y" -%}{{ post.date | date: date_format }}</p>
 			</div></a>
 			<p>{{ post.excerpt | strip_html | truncatewords:64 }}</p>
 			<p style="text-align:right;"><a href="{{ post.url }}">Продолжить чтение →</a></p>
