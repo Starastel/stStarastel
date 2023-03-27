@@ -294,8 +294,8 @@ table {
 	justify-content: space-between;
 	display: flex;
 }
-.pst_ttl_title {flex: 1;}
-.pst_ttl_date {flex: 1;}
+.pst_ttl_title {display: inline-block;}
+.pst_ttl_date {display: inline-block;}
 
 /**
  * Site header
