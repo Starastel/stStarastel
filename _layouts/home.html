@@ -5,9 +5,9 @@ layout: default
 <div class="home">
 	{%- if page.title -%}<h1 class="page-heading">{{ page.title }}</h1>{%- endif -%}
 <br>
-  {{ content }}
+	{{ content }}
 	<ul class="post-list">
-	  {%- for post in paginator.posts -%}
+	{%- for post in paginator.posts -%}
 		<li>
 			<a href="{{ post.url }}"><div class="pst_ttl">
 			<div><h3>{{ post.title }}</h3></div>
@@ -16,33 +16,32 @@ layout: default
 			<p>{{ post.excerpt | strip_html | truncatewords:64 }}</p>
 			<p style="text-align:right;"><a href="{{ post.url }}">Продолжить чтение →</a></p>
 		</li>
-		{% endfor %}
+	{% endfor %}
 	</ul>
 
 <center>
 {% if paginator.total_pages > 1 %}
 <div class="pagination">
-  {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path | relative_url }}">&laquo; Предыдущие</a>
-  {% else %}
-    <span>&laquo; Предыдущие</span>
-  {% endif %}
+	{% if paginator.previous_page %}
+		<a href="{{ paginator.previous_page_path | relative_url }}">&laquo; Предыдущие</a>
+	{% else %}
+		<span>&laquo; Предыдущие</span>
+	{% endif %}
 
-  {% for page in (1..paginator.total_pages) %}
-    {% if page == paginator.page %}
-      <em>{{ page }}</em>
-    {% elsif page == 1 %}
-      <a href="{{ '/' | relative_url }}">{{ page }}</a>
-    {% else %}
-      <a href="{{ site.paginate_path | relative_url | replace: ':num', page }}">{{ page }}</a>
-    {% endif %}
-  {% endfor %}
+	{% for page in (1..paginator.total_pages) %}
+		{% if page == paginator.page %}
+			<em>{{ page }}</em>
+		{% elsif page == 1 %}
+			<a href="{{ '/' | relative_url }}">{{ page }}</a>
+	{% else %}
+		<a href="{{ site.paginate_path | relative_url | replace: ':num', page }}">{{ page }}</a>
+	{% endif %}{% endfor %}
 
-  {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path | relative_url }}">Следующие &raquo;</a>
-  {% else %}
-    <span>Следующие &raquo;</span>
-  {% endif %}
+	{% if paginator.next_page %}
+		<a href="{{ paginator.next_page_path | relative_url }}">Следующие &raquo;</a>
+	{% else %}
+		<span>Следующие &raquo;</span>
+	{% endif %}
 </div>
 {% endif %}
 </center>
