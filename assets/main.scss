@@ -159,6 +159,20 @@ a {
 	}
 }
 
+a * {
+	color: $link-color;
+	text-decoration: none;
+
+	&:visited * {
+		color: darken($text-color, 20%);
+	}
+
+	&:hover * {
+		color: $link-color;
+		background: #0000ff;
+	}
+}
+
 blockquote {
 	color: $grey-color;
 	border-left: 4px solid $grey-color-light;
