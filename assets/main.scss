@@ -233,10 +233,9 @@ table {
 }
 
 .pst_ttl {
-	display: inline-flex;
+	display: flex;
 	justify-content: space-between;
-	align-items: baseline;
-	width: 100%;
+	align-items: center;
 	align-content: center;
 }
 
