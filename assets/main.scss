@@ -296,7 +296,7 @@ table {
 	align-items: center;
 	align-content: center;
 
-        &:hover {
+        &:hover * {
 		color: $link-color;
 		background: #0000ff;
 	}
