@@ -235,7 +235,9 @@ table {
 .pst_ttl {
 	display: flex;
 	justify-content: space-between;
-	margin: auto;
+	margin-left: auto;
+	margin-right: auto;
+	align-items: baseline;
 }
 
 .site-header {
