@@ -293,18 +293,7 @@ table {
 .pst_ttl {
 	justify-content: space-between;
 display: inline-block;
-        &:hover * {
-		color: $link-color;
-		background: #0000ff;
 	}
-}
-.pst_ttl:hover {
-        color: $link-color;
-	background: #0000ff;
-}
-.pst_ttl:hover * {
-        color: $link-color;
-	background: #0000ff;
 }
 
 .pst_ttl table {
