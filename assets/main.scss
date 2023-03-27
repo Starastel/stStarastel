@@ -248,19 +248,24 @@ table {
 
 .pst_ttl {
 	justify-content: space-between;
+	min-height: $spacing-unit * 1.865;
+	margin-bottom: -22px;
+	position: relative;
 }
 
-.pst_ttl_title {float: left;}
-.pst_ttl_date {float: right;}
+.pst_ttl_title {
+	float: left;
+	text-align: left;
+}
+.pst_ttl_date {
+	float: right;
+	text-align: right;
+}
 
-/**
- * Site header
- */
 .site-header {
 	min-height: $spacing-unit * 1.865;
 	margin-bottom: -22px;
 
-	// Positioning context for the mobile navigation icon
 	position: relative;
 }
 
