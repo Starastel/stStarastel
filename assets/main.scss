@@ -66,14 +66,13 @@ dl, dd, ol, ul, figure {
 body {
 	font-family: 'Noto Sans Display';
 	font-size: 14pt;
-	font-stretch: ultra-condensed;
 	color: $text-color;
 	background-color: $background-color;
 	-webkit-text-size-adjust: 100%;
 	-webkit-font-feature-settings: "kern" 1;
-		 -moz-font-feature-settings: "kern" 1;
-			 -o-font-feature-settings: "kern" 1;
-					font-feature-settings: "kern" 1;
+	-moz-font-feature-settings: "kern" 1;
+	-o-font-feature-settings: "kern" 1;
+	font-feature-settings: "kern" 1;
 	font-kerning: normal;
 	display: flex;
 	min-height: 100vh;
@@ -294,8 +293,10 @@ table {
 	justify-content: space-between;
 	display: flex;
 }
-.pst_ttl_title {display: inline-block;}
-.pst_ttl_date {display: inline-block;}
+.pst_ttla a {display: inline-block}
+
+.pst_ttl_title {display: inline-block}
+.pst_ttl_date {display: inline-block}
 
 /**
  * Site header
