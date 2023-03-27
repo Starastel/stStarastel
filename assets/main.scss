@@ -307,20 +307,6 @@ table {
 	}
 }
 
-.pst_ttl a {
-	color: $link-color;
-	text-decoration: none;
-
-	&:visited {
-		color: darken($text-color, 20%);
-	}
-
-	&:hover {
-		color: $link-color;
-		background: #0000ff;
-	}
-}
-
 /**
  * Site header
  */
