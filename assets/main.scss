@@ -29,13 +29,6 @@ $content-width:		800px !default;
 $on-palm:					600px !default;
 $on-laptop:				800px !default;
 
-// Use media queries like this:
-// @include media-query($on-palm) {
-//	 .wrapper {
-//		 padding-right: $spacing-unit / 2;
-//		 padding-left: $spacing-unit / 2;
-//	 }
-// }
 @mixin media-query($device) {
 	@media screen and (max-width: $device) {
 		@content;
@@ -46,11 +39,6 @@ $on-laptop:				800px !default;
 	font-size: $base-font-size * $ratio;
 }
 
-/* ************************** */
-
-/**
- * Reset some basic elements
- */
 body, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
 dl, dd, ol, ul, figure {
@@ -79,18 +67,13 @@ body {
 	flex-direction: column;
 }
 
-/**
- * Set `margin-bottom` to maintain vertical rhythm
- */
 h1, h2, h3, h4, h5, h6, blockquote, pre, ol, dl, figure,
 %vertical-rhythm {
 	margin-bottom: 12pt;
 	margin-top: 12pt;
 }
 
-main {
-	display: block; /* Default value of `display` of `main` element is 'inline' in IE 11. */
-}
+main {display: block;}
 
 img {
 	max-width: 100%;
@@ -102,13 +85,9 @@ img {
 	border: 2px solid white;
 }
 
-figure > img {
-	display: block;
-}
+figure > img {display: block;}
 
-figcaption {
-	font-size: $small-font-size;
-}
+figcaption {font-size: $small-font-size;}
 
 ul, ol {
 	margin-left: 1pt;
@@ -180,9 +159,7 @@ blockquote {
 	letter-spacing: -1px;
 	font-style: italic;
 
-	> :last-child {
-		margin-bottom: 0;
-	}
+	> :last-child {margin-bottom: 0;}
 }
 
 
@@ -198,9 +175,7 @@ code {
 	background-color: #eef;
 }
 
-code {
-	padding: 1px 5px;
-}
+code {padding: 1px 5px;}
 
 pre {
 	padding: 8px 12px;
@@ -261,9 +236,6 @@ pre {
 	clear: both;
 }
 
-/**
- * Tables
- */
 table {
 	margin-bottom: $spacing-unit;
 	width: 100%;
@@ -272,21 +244,15 @@ table {
 	border-collapse: collapse;
 	border: 1px solid $grey-color-light;
 	tr {
-		&:nth-child(even) {
-			background-color: lighten($grey-color-light, 6%);
-		}
+		&:nth-child(even) {background-color: lighten($grey-color-light, 6%);}
 	}
-	th, td {
-		padding: ($spacing-unit / 3) ($spacing-unit / 2);
-	}
+	th, td {padding: ($spacing-unit / 3) ($spacing-unit / 2);}
 	th {
 		background-color: lighten($grey-color-light, 3%);
 		border: 1px solid darken($grey-color-light, 4%);
 		border-bottom-color: darken($grey-color-light, 12%);
 	}
-	td {
-		border: 1px solid $grey-color-light;
-	}
+	td {border: 1px solid $grey-color-light;}
 }
 
 .pst_ttl {
@@ -295,8 +261,8 @@ table {
 }
 .pst_ttla a {display: inline-block}
 
-.pst_ttl_title {display: inline-block}
-.pst_ttl_date {display: inline-block}
+.pst_ttl_title {float: left;}
+.pst_ttl_date {float: right;}
 
 /**
  * Site header
@@ -318,31 +284,23 @@ table {
 	float: left;
 
 	&,
-	&:visited {
-		color: $grey-color-dark;
-	}
+	&:visited {color: $grey-color-dark;}
 }
 
 .site-nav {
 	float: right;
 	line-height: $base-line-height * $base-font-size * 2.25;
 
-	.nav-trigger {
-			display: none;
-	}
+	.nav-trigger {display: none;}
 
-	.menu-icon {
-		display: none;
-	}
+	.menu-icon {display: none;}
 
 	.page-link {
 		color: $text-color;
 		line-height: $base-line-height;
 
 		// Gaps between nav items, but not on the last one
-		&:not(:last-child) {
-			margin-right: 20px;
-		}
+		&:not(:last-child) {margin-right: 20px;}
 	}
 
 	@include media-query($on-palm) {
@@ -372,9 +330,7 @@ table {
 			padding-top: 10px;
 			text-align: center;
 
-			> svg {
-				fill: $grey-color-dark;
-			}
+			> svg {fill: $grey-color-dark;}
 		}
 
 		input ~ .trigger {
@@ -391,44 +347,28 @@ table {
 			display: block;
 			padding: 5px 10px;
 
-			&:not(:last-child) {
-				margin-right: 0;
-			}
+			&:not(:last-child) {margin-right: 0;}
 			margin-left: 20px;
 		}
 	}
 }
 
-/**
- * Site footer
- */
-.site-footer p {
-	text-align: center;
-}
+.site-footer p {text-align: center;}
 
-/**
- * Page content
- */
 .page-content {
 	padding: $spacing-unit 0;
 	flex: 1;
 }
 
-.page-heading {
-	@include relative-font-size(2);
-}
+.page-heading {@include relative-font-size(2);}
 
-.post-list-heading {
-	@include relative-font-size(1.75);
-}
+.post-list-heading {@include relative-font-size(1.75);}
 
 .post-list {
 	margin-left: 0;
 	list-style: none;
 
-	> li {
-		margin-bottom: $spacing-unit;
-	}
+	> li {margin-bottom: $spacing-unit;}
 }
 
 .post-meta {
@@ -444,13 +384,7 @@ table {
 }
 
 
-
-/**
- * Posts
- */
-.post-header {
-	margin-bottom: $spacing-unit;
-}
+.post-header {margin-bottom: $spacing-unit;}
 
 .post-title {
 	text-align: center;
