@@ -10,8 +10,8 @@ layout: default
 	{%- for post in paginator.posts -%}
 		<li>
 			<a href="{{ post.url }}"><div class="pst_ttl">
-				<div><h3>{{ post.title }}</h3></div>
-				<div><p style="text-align:right;">{%- assign date_format = site.date_format | default: "%d-%m-%Y" -%}{{ post.date | date: date_format }}</p></div>
+				<div class='pst_blk1'><h3>{{ post.title }}</h3></div>
+				<div class='pst_blk2'><p style="text-align:right;">{%- assign date_format = site.date_format | default: "%d-%m-%Y" -%}{{ post.date | date: date_format }}</p></div>
 			</div></a>
 			<p>{{ post.excerpt | strip_html | truncatewords:64 }}</p>
 			<p style="text-align:right;"><a href="{{ post.url }}">Продолжить чтение →</a></p>
