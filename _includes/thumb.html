@@ -1,6 +1,1 @@
-<div class="thumb">
-<a href="{% if include.fullsize_ext %}{{ include.fullsize }}{% else %}{{ include.fullsize | relative_url }}{% endif %}">
-    <figure>
-      <img src="{{ include.thumb | relative_url }}" alt="{{ include.caption | strip_html }}"/>
-    </figure>
-</a></div>
+<div class="thumb"><a href="{% if include.fullsize_ext %}{{ include.fullsize }}{% else %}{{ include.fullsize | relative_url }}{% endif %}"><figure><img src="{{ include.thumb | relative_url }}" alt="{{ include.caption | strip_html }}"/></figure></a></div>
