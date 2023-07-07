@@ -90,8 +90,8 @@ figure > img {display: block;}
 figcaption {font-size: $small-font-size;}
 
 ul, ol {
-	margin-left: 1pt;
-	text-indent: 10pt; 
+	margin-left: 0pt;
+	text-indent: 25pt; 
 	text-align: justify;
 	list-style-type: square;
 	list-style-position: inside;
@@ -110,13 +110,12 @@ p {
 	-moz-hyphens: auto;
 	-ms-hyphens: auto;
 	hyphens: auto;
-	margin-bottom: 5pt;
 }
 
 li {
 	> ul,
 	> ol {
-		margin-bottom: 5pt;
+		margin-bottom: 0pt;
 	}
 }
 
