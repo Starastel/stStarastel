@@ -118,12 +118,14 @@ p {
 	-moz-hyphens: auto;
 	-ms-hyphens: auto;
 	hyphens: auto;
+	bottom: 5pt;
 }
 
 li {
 	> ul,
 	> ol {
 		margin-bottom: 0pt;
+		bottom: 5pt;
 	}
 }
 
