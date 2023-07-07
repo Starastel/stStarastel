@@ -110,12 +110,13 @@ p {
 	-moz-hyphens: auto;
 	-ms-hyphens: auto;
 	hyphens: auto;
+	margin-bottom: 5pt;
 }
 
 li {
 	> ul,
 	> ol {
-		margin-bottom: 0;
+		margin-bottom: 5pt;
 	}
 }
 
