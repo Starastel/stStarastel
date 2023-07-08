@@ -124,7 +124,7 @@ ul, ol {
 	-moz-hyphens: auto;
 	-ms-hyphens: auto;
 	hyphens: auto;
-	margin-bottom: 5pt;
+	margin-bottom: 10pt;
 
 }
 
@@ -134,15 +134,15 @@ p {
 	-moz-hyphens: auto;
 	-ms-hyphens: auto;
 	hyphens: auto;
-	margin-bottom: 5pt;
+	margin-bottom: 10pt;
 }
 
 li {
 	> ul,
 	> ol {
-		margin-bottom: 5pt;
+		margin-bottom: 10pt;
 	}
-	margin-bottom: 5pt;
+	margin-bottom: 10pt;
 }
 
 h1, h2, h3, h4, h5, h6 {
