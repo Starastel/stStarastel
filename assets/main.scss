@@ -47,37 +47,37 @@ dl, dd, ol, ul, figure {
 }
 
 @font-face {
-	font-family: 'Noto Serif';
-	font-style: normal;
-	src: url('NotoSerif-Regular.woff2') format('woff2');
+	font-family: 'Charis SIL';
+	src: url('CharisSIL-Regular.woff2') format('woff2');
 	font-display: swap;
+	font-style: normal;
 	font-weight: normal;
 }
 @font-face {
-	font-family: 'Noto Serif';
+	font-family: 'Charis SIL';
+	src: url('CharisSIL-Italic.woff2') format('woff2');
+	font-display: swap;
 	font-style: italic;
-	src: url('NotoSerif-Italic.woff2') format('woff2');
-	font-display: swap;
 	font-weight: normal;
 }
 @font-face {
-	font-family: 'Noto Serif';
-	font-style: normal;
-	src: url('NotoSerif-Bold.woff2') format('woff2');
+	font-family: 'Charis SIL';
+	src: url('CharisSIL-Bold.woff2') format('woff2');
 	font-display: swap;
+	font-style: normal;
 	font-weight: bold;
 }
 @font-face {
-	font-family: 'Noto Serif';
-	font-style: italic;
-	src: url('NotoSerif-BoldItalic.woff2') format('woff2');
+	font-family: 'Charis SIL';
+	src: url('CharisSIL-BoldItalic.woff2') format('woff2');
 	font-display: swap;
+	font-style: italic;
 	font-weight: bold;
 }
 
 body {
-	font-family: 'Noto Serif';
-	font-size: 12pt;
+	font-family: 'Charis SIL';
+	font-size: 13.5pt;
 	color: $text-color;
 	background-color: $background-color;
 	-webkit-text-size-adjust: 100%;
