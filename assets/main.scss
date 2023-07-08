@@ -135,14 +135,17 @@ p {
 	-ms-hyphens: auto;
 	hyphens: auto;
 	margin-bottom: 10pt;
+	line-height: 0%;
 }
 
 li {
 	> ul,
 	> ol {
 		margin-bottom: 10pt;
+		line-height: 0%;
 	}
 	margin-bottom: 10pt;
+	line-height: 0%;
 }
 
 h1, h2, h3, h4, h5, h6 {
