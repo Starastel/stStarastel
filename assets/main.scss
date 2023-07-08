@@ -47,36 +47,36 @@ dl, dd, ol, ul, figure {
 }
 
 @font-face {
-	font-family: 'PT Astra Serif';
+	font-family: 'Noto Serif';
 	font-style: normal;
-	src: url('pt-astra-serif_regular.woff2') format('woff2');
+	src: url('NotoSerif-Regular.woff2') format('woff2');
 	font-display: swap;
 	font-weight: normal;
 }
 @font-face {
-	font-family: 'PT Astra Serif';
+	font-family: 'Noto Serif';
 	font-style: italic;
-	src: url('pt-astra-serif_italic.woff2') format('woff2');
+	src: url('NotoSerif-Italic.woff2') format('woff2');
 	font-display: swap;
 	font-weight: normal;
 }
 @font-face {
-	font-family: 'PT Astra Serif';
+	font-family: 'Noto Serif';
 	font-style: normal;
-	src: url('pt-astra-serif_bold.woff2') format('woff2');
+	src: url('NotoSerif-Bold.woff2') format('woff2');
 	font-display: swap;
 	font-weight: bold;
 }
 @font-face {
-	font-family: 'PT Astra Serif';
+	font-family: 'Noto Serif';
 	font-style: italic;
-	src: url('pt-astra-serif_bold-italic.woff2') format('woff2');
+	src: url('NotoSerif-BoldItalic.woff2') format('woff2');
 	font-display: swap;
 	font-weight: bold;
 }
 
 body {
-	font-family: 'PT Astra Serif';
+	font-family: 'Noto Serif';
 	font-size: 14pt;
 	color: $text-color;
 	background-color: $background-color;
@@ -89,6 +89,7 @@ body {
 	display: flex;
 	min-height: 100vh;
 	flex-direction: column;
+	margin-bottom: 12pt;
 }
 
 h1, h2, h3, h4, h5, h6, blockquote, pre, ol, dl, figure,
@@ -123,14 +124,13 @@ ul, ol {
 	-moz-hyphens: auto;
 	-ms-hyphens: auto;
 	hyphens: auto;
-	font-stretch: ultra-condensed;
+	margin-bottom: 12pt;
 
 }
 
 p {
 	text-align: justify;
 	text-indent: 25pt;
-	font-stretch: ultra-condensed;
 	-moz-hyphens: auto;
 	-ms-hyphens: auto;
 	hyphens: auto;
@@ -140,8 +140,8 @@ p {
 li {
 	> ul,
 	> ol {
-		margin-bottom: 0pt;
 		bottom: 5pt;
+		margin-bottom: 12pt;
 	}
 }
 
