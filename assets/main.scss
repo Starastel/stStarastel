@@ -94,7 +94,7 @@ body {
 
 h1, h2, h3, h4, h5, h6, blockquote, pre, ol, dl, figure,
 %vertical-rhythm {
-	margin-bottom: 12pt;
+	margin-bottom: 8pt;
 	margin-top: 12pt;
 }
 
@@ -135,17 +135,17 @@ p {
 	-ms-hyphens: auto;
 	hyphens: auto;
 	margin-bottom: 10pt;
-	line-height: 1.5;
+	line-height: 1.45;
 }
 
 li {
 	> ul,
 	> ol {
 		margin-bottom: 10pt;
-		line-height: 1.5;
+		line-height: 1.45;
 	}
 	margin-bottom: 10pt;
-	line-height: 1.5;
+	line-height: 1.45;
 }
 
 h1, h2, h3, h4, h5, h6 {
