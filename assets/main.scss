@@ -125,7 +125,6 @@ ul, ol {
 	-ms-hyphens: auto;
 	hyphens: auto;
 	margin-bottom: 10pt;
-
 }
 
 p {
@@ -137,6 +136,8 @@ p {
 	margin-bottom: 10pt;
 	line-height: 1.45;
 }
+
+.on {font-feature-settings:"lnum"}
 
 li {
 	> ul,
