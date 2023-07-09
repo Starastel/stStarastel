@@ -52,8 +52,6 @@ dl, dd, ol, ul, figure {
 	font-display: swap;
 	font-style: normal;
 	font-weight: normal;
-	font-feature-settings: "frac" 1; 
-	-moz-font-feature-settings: "frac" 1; 
 }
 @font-face {
 	font-family: 'Charis SIL';
@@ -61,8 +59,6 @@ dl, dd, ol, ul, figure {
 	font-display: swap;
 	font-style: italic;
 	font-weight: normal;
-	font-feature-settings: "frac" 1; 
-	-moz-font-feature-settings: "frac" 1; 
 }
 @font-face {
 	font-family: 'Charis SIL';
@@ -70,8 +66,6 @@ dl, dd, ol, ul, figure {
 	font-display: swap;
 	font-style: normal;
 	font-weight: bold;
-	font-feature-settings: "frac" 1; 
-	-moz-font-feature-settings: "frac" 1; 
 }
 @font-face {
 	font-family: 'Charis SIL';
@@ -79,8 +73,6 @@ dl, dd, ol, ul, figure {
 	font-display: swap;
 	font-style: italic;
 	font-weight: bold;
-	font-feature-settings: "frac" 1; 
-	-moz-font-feature-settings: "frac" 1; 
 }
 
 body {
@@ -98,6 +90,8 @@ body {
 	min-height: 100vh;
 	flex-direction: column;
 	margin-bottom: 12pt;
+	font-feature-settings:"frac" 1;
+	-moz-font-feature-settings: "frac" 1; 
 }
 
 h1, h2, h3, h4, h5, h6, blockquote, pre, ol, dl, figure,
