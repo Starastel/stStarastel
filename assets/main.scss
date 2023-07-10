@@ -359,13 +359,11 @@ table {
 .post-header {
 	@extend %clearfix;
 	.post-title {
-		@include %reset-box-model;
 		display: inline;
 		float: left;
 	a {text-decoration: none}
 	}
 	.post-meta {
-		@include %reset-box-model;
 		display: inline;
 		float: right;
 		text-align: right;
