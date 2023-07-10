@@ -380,7 +380,17 @@ table {
 }
 
 
-.post-header {margin-bottom: $spacing-unit;}
+.post-header {
+	@include clearfix;
+
+	.post-title {
+		@include reset-box-model;
+		display: inline;
+		float: left;
+	a {
+		text-decoration: none;
+	}
+}
 
 .post-title {
 	text-align: center;
