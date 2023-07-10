@@ -122,14 +122,14 @@ ul, ol {
 	list-style-position: inside;
 	text-align: justify;
 	hyphens: auto;
-	margin-bottom: 10pt;
+	margin-bottom: 15pt;
 }
 
 p {
 	text-align: left;
 	text-indent: 0pt;
 	hyphens: auto;
-	margin-bottom: 10pt;
+	margin-bottom: 15pt;
 	line-height: 1.45;
 }
 
@@ -138,10 +138,10 @@ p {
 li {
 	> ul,
 	> ol {
-		margin-bottom: 10pt;
+		margin-bottom: 15pt;
 		line-height: 1.45;
 	}
-	margin-bottom: 10pt;
+	margin-bottom: 15pt;
 	line-height: 1.45;
 }
 
