@@ -14,6 +14,7 @@ layout: default
 	<a class="post-link" style="text-align:right;" href="{{ post.url }}">Продолжить чтение →</a></div>
 {% endfor %}</div>
 
+{% if paginator.total_pages > 1 %}
 <div class="pagination">
 	{% if paginator.previous_page %}
 		<a href="{{ paginator.previous_page_path }}" class="previous">← Предидущие</a>
@@ -29,4 +30,5 @@ layout: default
 		<span class="next ">Следующие →</span>
 	{% endif %}
 </div>
+{% endif %}
 </div>
