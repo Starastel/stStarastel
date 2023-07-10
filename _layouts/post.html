@@ -3,8 +3,8 @@ layout: default
 ---
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 <header class="post-header">
-	<center><font size="5pt"><h1>{{ page.title | escape }}</h1></font></center>
-	<p class="post-meta"><font size="3pt"><time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{%- assign date_format = site.date_format | default: "%d.%m.%Y" -%}{{ page.date | date: date_format }}</time></font></p>
+		<h1 class="post-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h1>
+		<p class="post-meta"><time><font size="3pt">{{ post.date | date: "%d.%m.%Y" }}</font></time></p>
 </header>
 <div class="post-content e-content" itemprop="articleBody">{{ content }}</div>
 <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
