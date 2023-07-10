@@ -361,25 +361,8 @@ table {
 
 .post-list-heading {@include relative-font-size(1.75);}
 
-.post-list {
-	margin-left: 0;
-	list-style: none;
-
-	> li {margin-bottom: $spacing-unit;}
-}
-
-.post-meta {
-	font-size: $small-font-size;
-	color: $grey-color;
-	text-align: right;
-	
-}
-
-.post-link {display: block;}
-
-
 .post-header {
-	@include clearfix;
+	@extend %clearfix;
 	.post-title {
 		@include reset-box-model;
 		display: inline;
@@ -393,13 +376,6 @@ table {
 		text-align: right;
 		font-weight: bold;
 		@include font-size(12);
-	}
-}
-
-.post-title {
-	text-align: center;
-	@include media-query($on-laptop) {
-		@include relative-font-size(2.25);
 	}
 }
 
