@@ -352,11 +352,6 @@ table {
 
 .site-footer p {text-align: center;}
 
-.page-content {
-	padding: $spacing-unit 0;
-	flex: 1;
-}
-
 .page-heading {@include relative-font-size(2);}
 
 .post-list-heading {@include relative-font-size(1.75);}
@@ -364,13 +359,13 @@ table {
 .post-header {
 	@extend %clearfix;
 	.post-title {
-		@include reset-box-model;
+		@include %reset-box-model;
 		display: inline;
 		float: left;
 	a {text-decoration: none}
 	}
 	.post-meta {
-		@include reset-box-model;
+		@include %reset-box-model;
 		display: inline;
 		float: right;
 		text-align: right;
