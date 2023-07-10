@@ -47,37 +47,37 @@ dl, dd, ol, ul, figure {
 }
 
 @font-face {
-	font-family: 'Charis SIL';
-	src: url('CharisSIL-Regular.woff2') format('woff2');
+	font-family: 'Merriweather';
+	src: url('Merriweather-Regular.woff2') format('woff2');
 	font-display: swap;
 	font-style: normal;
 	font-weight: normal;
 }
 @font-face {
-	font-family: 'Charis SIL';
-	src: url('CharisSIL-Italic.woff2') format('woff2');
+	font-family: 'Merriweather';
+	src: url('Merriweather-Italic.woff2') format('woff2');
 	font-display: swap;
 	font-style: italic;
 	font-weight: normal;
 }
 @font-face {
-	font-family: 'Charis SIL';
-	src: url('CharisSIL-Bold.woff2') format('woff2');
+	font-family: 'Merriweather';
+	src: url('Merriweather-Bold.woff2') format('woff2');
 	font-display: swap;
 	font-style: normal;
 	font-weight: bold;
 }
 @font-face {
-	font-family: 'Charis SIL';
-	src: url('CharisSIL-BoldItalic.woff2') format('woff2');
+	font-family: 'Merriweather';
+	src: url('Merriweather-BoldItalic.woff2') format('woff2');
 	font-display: swap;
 	font-style: italic;
 	font-weight: bold;
 }
 
 body {
-	font-family: 'Charis SIL';
-	font-size: 13.5pt;
+	font-family: 'Merriweather';
+	font-size: 14pt;
 	color: $text-color;
 	background-color: $background-color;
 	-webkit-text-size-adjust: 100%;
@@ -116,22 +116,18 @@ figcaption {font-size: $small-font-size;}
 
 ul, ol {
 	margin-left: 0pt;
-	text-indent: 25pt; 
-	text-align: justify;
+	text-indent: 0pt;
+	text-align: left;
 	list-style-type: "⁃ ";
 	list-style-position: inside;
 	text-align: justify;
-	-moz-hyphens: auto;
-	-ms-hyphens: auto;
 	hyphens: auto;
 	margin-bottom: 10pt;
 }
 
 p {
-	text-align: justify;
-	text-indent: 25pt;
-	-moz-hyphens: auto;
-	-ms-hyphens: auto;
+	text-align: left;
+	text-indent: 0pt;
 	hyphens: auto;
 	margin-bottom: 10pt;
 	line-height: 1.45;
