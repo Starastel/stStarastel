@@ -12,7 +12,7 @@ layout: default
 		<p class="post-meta"><time><font size="3pt">{{ post.date | date: "%d.%m.%Y" }}</font></time></p>
 	</header>
 	<div class="post-content">{{ post.excerpt | strip_html | truncatewords:64 }}
-	<p><a class="post-link" style="text-align:right;" href="{{ post.url }}">Продолжить чтение →</a></p></div>
+	<p style="text-align:right;"><a class="post-link" href="{{ post.url }}">Продолжить чтение →</a></p></div>
 </article>
 {% endfor %}</div>
 
