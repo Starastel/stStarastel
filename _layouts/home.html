@@ -8,7 +8,7 @@ layout: default
 {%- for post in paginator.posts -%}
 	<header class="post-header">
 		<h1 class="post-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h1>
-		<time><font size="3pt" style="text-align:right;">{{ post.date | date: "%d.%m.%Y" }}</font></time>
+		<p class="post-meta"><time><font size="3pt">{{ post.date | date: "%d.%m.%Y" }}</font></time></p>
 	</header>
 	<div class="post-content">{{ post.excerpt | strip_html | truncatewords:64 }}
 	<a class="post-link" style="text-align:right;" href="{{ post.url }}">Продолжить чтение →</a></div>
