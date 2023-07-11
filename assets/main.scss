@@ -80,10 +80,6 @@ body {
 	font-size: 13pt;
 	color: $text-color;
 	background-color: $background-color;
-	-webkit-text-size-adjust: 100%;
-	-webkit-font-feature-settings: "kern" 1;
-	-moz-font-feature-settings: "kern" 1;
-	-o-font-feature-settings: "kern" 1;
 	font-feature-settings: "kern" 1;
 	font-kerning: normal;
 	display: flex;
@@ -97,7 +93,7 @@ h1, h2, h3, h4, h5, h6, blockquote, pre, ol, dl, figure,
 	text-align: left;
 	text-indent: 5pt;
 	margin-bottom: 8pt;
-	margin-top: 15pt;
+	margin-top: 20pt;
 }
 
 main {display: block;}
