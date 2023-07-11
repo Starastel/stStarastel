@@ -10,7 +10,7 @@ layout: default
 		<h1 class="post-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h1>
 		<p class="post-meta"><time>{{ post.date | date: "%d.%m.%Y" }}</time></p>
 	</header>
-	<div class="post-content">{{ post.excerpt | markdownify | strip_html | truncatewords:64 }}
+	<div class="post-content">{{ post.excerpt | markdownify | truncatewords:64 }}
 	<p style="text-align:right;"><a class="post-link" href="{{ post.url }}">Продолжить чтение →</a></p></div>
 </article>
 {% endfor %}</div>
