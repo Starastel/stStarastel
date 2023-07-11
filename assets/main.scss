@@ -336,8 +336,10 @@ table {
 	}
 }
 
-.site-footer p {text-align: center}
-
+.site-footer {
+	line-height: $base-line-height * $base-font-size * 2.25;
+	p {text-align: center}
+}
 .page-heading {@include relative-font-size(2);}
 
 .post {margin-bottom: 15pt}
