@@ -119,14 +119,12 @@ ul, ol {
 	list-style-type: "— ";
 	list-style-position: inside;
 	text-align: left;
-	hyphens: auto;
 	margin-bottom: 15pt;
 }
 
 p {
 	text-align: left;
 	text-indent: 0pt;
-	hyphens: auto;
 	margin-bottom: 15pt;
 }
 
@@ -142,6 +140,7 @@ li {
 
 h1, h2, h3, h4, h5, h6 {
 	font-weight: $base-font-weight;
+	font-style: bold;
 }
 
 a {
