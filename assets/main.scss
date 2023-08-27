@@ -108,6 +108,8 @@ img {
 	border: 2px solid white;
 }
 
+
+
 figure > img {display: block;}
 
 figcaption {font-size: $small-font-size;}
@@ -129,6 +131,8 @@ p {
 }
 
 .on {font-variant-numeric: oldstyle-nums;}
+
+.ir {float:left;}
 
 li {
 	> ul,
